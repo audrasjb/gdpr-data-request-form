@@ -27,7 +27,12 @@ class GDRF_Widget extends WP_Widget {
 	}
 
 	public function widget( $args, $instance ) {
-		
+
+		// Enqueue CSS/JS
+		wp_enqueue_script( 'gdrf-public-scripts' );
+		wp_enqueue_style( 'gdrf-public-styles' );
+
+		// Display the form
 		?>
 			<form action="<?php echo esc_url( admin_url( 'admin-ajax.php' ) ); ?>" method="post" id="gdrf-form" class="widget widget_gdrf">
 				<input type="hidden" name="action" value="gdrf_data_request">

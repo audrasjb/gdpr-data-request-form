@@ -13,6 +13,12 @@
 
 function gdrf_shortcode_init() {
 	function gdrf_shortcode_data_request( $atts ) {
+
+		// Enqueue CSS/JS
+		wp_enqueue_script( 'gdrf-public-scripts' );
+		wp_enqueue_style( 'gdrf-public-styles' );
+
+		// Display the form
 		ob_start();
 		?>
 			<form action="<?php echo esc_url( admin_url( 'admin-ajax.php' ) ); ?>" method="post" id="gdrf-form">
