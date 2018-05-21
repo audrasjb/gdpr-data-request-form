@@ -15,11 +15,16 @@
  * Provide public function to display forms int themes.
  *
  * @since 1.1
- * @param	$args array of arguments
- * @param	$title string optional. Default '' (no title)
+ * @param	$args array of arguments {
+ * 		@param	$title 				string optional. Default '' (no title)
+ * 		@param	$description 		string optional. Default '' (no description text)
+ * 		@param	$title 				string optional. Default '' (no title)
+ * 		@param	$title 				string optional. Default '' (no title)
+ * 		@param	$captcha_question 	string optional. Default '' (no captcha question)
+ * 		@param	$captcha_answer	 	int optional. Default 0 (no captcha)
  *
  */
-function gdrf_data_request_form( $display_title ) {
+function gdrf_data_request_form( $args ) {
 
 		ob_start();
 		?>
