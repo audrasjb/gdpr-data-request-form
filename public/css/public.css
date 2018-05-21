@@ -1,0 +1,26 @@
+/**
+ * Public CSS rules
+ */
+#gdrf-radio-label {
+	font-weight: 800;
+	color: #333;
+	display: block;
+	margin-bottom: .5em;
+}
+.gdrf-data-type-input, .gdrf-data-type-label {
+	display: inline-block;
+}
+.gdrf-success {
+	display: block;
+	margin: 0 0 1em 0;
+	padding: .5em 1em;
+	background-color: #ecf7ed;
+	border-left: 4px #46b450 solid;
+}
+.gdrf-errors {
+	display: block;
+	margin: 0 0 1em 0;
+	padding: .5em 1em;
+	background-color: #fbeaea;
+	border-left: 4px #dc3232 solid;
+}
