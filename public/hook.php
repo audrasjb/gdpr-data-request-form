@@ -15,18 +15,19 @@
  * Provide public function to display forms int themes.
  *
  * @since 1.1
- * @param	$args array of arguments {
+ * @param		$args array of arguments {
  * 		@param	$title 				string optional. Default '' (no title)
  * 		@param	$description 		string optional. Default '' (no description text)
- * 		@param	$title 				string optional. Default '' (no title)
- * 		@param	$title 				string optional. Default '' (no title)
+ * 		@param	$request_type 		string optional. Default 'export_remove' (displays radio buttons for both options). You can use 'export' or 'remove' (the option is set in an hidden input element so it's not displayed for the user) OR 'export_remove' (displays radio buttons for both options).
+ * 		@param	$email_label 		string optional. Default '' (no email label)
  * 		@param	$captcha_question 	string optional. Default '' (no captcha question)
- * 		@param	$captcha_answer	 	int optional. Default 0 (no captcha)
- *
+ * 		@param	$captcha_answer	 	int optional. Default 0 (no captcha). Use integer value to set up a captcha.
+ * 		@param 	$email_label 		string optional. Default 'Your email address (required)'
+ * 		@param	$submit_label 		string optional. Default 'Send request'
+ * }
  */
 function gdrf_data_request_form( $args ) {
 
-		ob_start();
 		?>
 			<form action="<?php echo esc_url( admin_url( 'admin-ajax.php' ) ); ?>" method="post" id="gdrf-form">
 				<input type="hidden" name="action" value="gdrf_data_request">
@@ -59,5 +60,4 @@ function gdrf_data_request_form( $args ) {
 				</p>
 			</form>
 		<?php
-		return ob_get_clean();
 }
