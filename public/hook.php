@@ -11,23 +11,35 @@
  * @prefix     gdrf_
  */
 
+/*******************
+* PLEASE NOTE: THIS FUNCTION IS NOT AVAILABLE FOR THE MOMENT. THIS IS PLANNED FOR RELEASE 1.2, SCHEDULED ON MAY, 25TH/26TH
+* ALTERNATIVELY, YOU CAN USE `echo do_shortcode([gdpr-data-request]);`.
+********************/
+
 /*
  * Provide public function to display forms int themes.
  *
- * @since 1.1
- * @param		$args array of arguments {
- * 		@param	$title 				string optional. Default '' (no title)
- * 		@param	$description 		string optional. Default '' (no description text)
- * 		@param	$request_type 		string optional. Default 'export_remove' (displays radio buttons for both options). You can use 'export' or 'remove' (the option is set in an hidden input element so it's not displayed for the user) OR 'export_remove' (displays radio buttons for both options).
- * 		@param	$email_label 		string optional. Default '' (no email label)
- * 		@param	$captcha_question 	string optional. Default '' (no captcha question)
- * 		@param	$captcha_answer	 	int optional. Default 0 (no captcha). Use integer value to set up a captcha.
- * 		@param 	$email_label 		string optional. Default 'Your email address (required)'
- * 		@param	$submit_label 		string optional. Default 'Send request'
+ * @since 1.2
+ * @param		$settings 			array of arguments {
+ * @param			title 				string optional. Default '' (no title)
+ * @param			description 		string optional. Default '' (no description text)
+ * @param			request_type 		string optional. Default 'export_remove' (displays radio buttons for both options). You can use 'export' or 'remove' (the option is set in an hidden input element so it's not displayed for the user) OR 'export_remove' (displays radio buttons for both options).
+ * @param			email_label 		string optional. Default '' (no email label)
+ * @param			captcha_label	 	string optional. Default '' (no captcha question)
+ * @param			captcha_value	 	int optional. Default 0 (no captcha). Use integer value to set up a captcha.
+ * @param	 		email_label 		string optional. Default 'Your email address (required)'
+ * @param			submit_label 		string optional. Default 'Send request'
  * }
  */
-function gdrf_data_request_form( $args ) {
-
+function gdrf_data_request_form( $settings ) {
+		$title = esc_html( $settings['title'] );
+		$description = esc_html( $settings['description'] );
+		$request_type = esc_html( $settings['request_type'] );
+		$email_label = esc_html( $settings['email_label'] );
+		$captcha_label = esc_html( $settings['captcha_label'] );
+		$captcha_value = esc_html( $settings['captcha_value'] );
+		$email_label = esc_html( $settings['email_label'] );
+		$submit_label = esc_html( $settings['submit_label'] );
 		?>
 			<form action="<?php echo esc_url( admin_url( 'admin-ajax.php' ) ); ?>" method="post" id="gdrf-form">
 				<input type="hidden" name="action" value="gdrf_data_request">
