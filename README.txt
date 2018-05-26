@@ -1,4 +1,4 @@
-=== GDPR Data Request Form ===
+﻿=== GDPR Data Request Form ===
 Contributors: audrasjb,whodunitagency
 Tags: GDPR, RGPD, privacy, form, data request, personal data request, export, personal data
 Requires at least: 4.9.6
@@ -41,7 +41,7 @@ GDPR Data Request Form is using AJAX to provide clean and user-friendly forms in
 **Data Request Workflow:**
 
 - The user/visitor use your Personal Data Request Form to ask for Personal Data Export or Erasure.
-- A request is created in WordPress Admin > Settings > Privacy.
+- A request is created in WordPress Tools > Export/Erase personal data.
 - An email is sent to the user/visitor to confirm this request.
 - The user request is set to Confirmed in WordPress Admin > Settings > Privacy.
 - An email is sent to the website administrator to validate the request.
