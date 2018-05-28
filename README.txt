@@ -65,7 +65,7 @@ GDPR Data Request Form is using AJAX to provide clean and user-friendly forms in
 - An email is sent to the user to confirm this request.
 - The user request is set to Confirmed in WordPress Tools > Export/Erase personal data.
 - An email is sent to the website administrator to validate the request.
-- The personal data are sent by email to the user/visitor (as a 3-day download link), or erased, depending of the user request type.
+- The personal data are sent by email to the user/visitor (as a 3-day available download link), or erased, depending on the user request type.
 
 = How to display Data Request Forms using shortcodes? =
 
