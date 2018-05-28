@@ -9,11 +9,12 @@
 						
 			var	button = $( '#gdrf-submit-button' ),
 				data = {
-					'action': 'gdrf_data_request',
-					'gdrf_data_type' : $( 'input[name=gdrf_data_type]:checked', '#gdrf-form').val(),
-					'gdrf_data_email': $( '#gdrf_data_email' ).val(),
-					'gdrf_data_human': $( '#gdrf_data_human' ).val(),
-					'gdrf_data_nonce': $( '#gdrf_data_nonce' ).val(),
+					'action':               'gdrf_data_request',
+					'gdrf_data_type' :      $( 'input[name=gdrf_data_type]:checked', '#gdrf-form').val(),
+					'gdrf_data_human_key':  $( '#gdrf_data_human_key' ).val(),
+					'gdrf_data_email':      $( '#gdrf_data_email' ).val(),
+					'gdrf_data_human':      $( '#gdrf_data_human' ).val(),
+					'gdrf_data_nonce':      $( '#gdrf_data_nonce' ).val(),
 				};
 
 			$( '.gdrf-errors' ).remove();
