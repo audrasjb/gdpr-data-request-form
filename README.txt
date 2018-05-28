@@ -26,7 +26,7 @@ Easy to integrate:
 The widget allows to integrate Data Request Form in your theme widget areas. It comes with two options: Form Title and Form Description Paragraph. Both are empty by default so no title/description are displayed by default.
 
 - **Shortcode**
-`[gpdr-data-request]` shortcode allows to integrate Data Request Form everywhere you want, wether in a post or with PHP, using `echo do_shortcode( ['[gpdr-data-request]'] );` PHP snippet. This shortcode has no parameter.
+`[gpdr-data-request]` shortcode allows to integrate Data Request Form everywhere you want, wether in a post or with PHP, using `echo do_shortcode( '[gpdr-data-request]' );` PHP snippet. This shortcode has no parameter.
 
 - **Function** (planned release: 1.2 / next major release)
 We’re currently working on some PHP functions to allow developers to customize front-end forms. This is slated to the next release.
@@ -43,7 +43,7 @@ GDPR Data Request Form is using AJAX to provide clean and user-friendly forms in
 - The user/visitor use your Personal Data Request Form to ask for Personal Data Export or Erasure.
 - A request is created in WordPress Tools > Export/Erase personal data.
 - An email is sent to the user/visitor to confirm this request.
-- The user request is set to Confirmed in WordPress Admin > Settings > Privacy.
+- The user request is set to Confirmed in Tools > Export/Erase personal data.
 - An email is sent to the website administrator to validate the request.
 - The personal data are sent by email to the user/visitor (as a 3-day available download link), or erased, depending on the user request type.
 
@@ -61,9 +61,9 @@ GDPR Data Request Form is using AJAX to provide clean and user-friendly forms in
 = Data Request Workflow =
 
 - The user/visitor use your Personal Data Request Form to ask for Personal Data Export or Erasure.
-- A `request` is created in WordPress Admin > Settings > Privacy.
+- A `request` is created in WordPress Tools > Export/Erase personal data.
 - An email is sent to the user to confirm this request.
-- The user request is set to Confirmed in WordPress Admin > Settings > Privacy.
+- The user request is set to Confirmed in WordPress Tools > Export/Erase personal data.
 - An email is sent to the website administrator to validate the request.
 - The personal data are sent by email to the user/visitor (as a 3-day download link), or erased, depending of the user request type.
 
