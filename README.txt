@@ -4,7 +4,7 @@ Tags: GDPR, RGPD, privacy, form, data request, personal data request, export, pe
 Requires at least: 4.9.6
 Tested up to: 4.9.6
 Requires PHP: 5.4
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -97,6 +97,12 @@ If you speak French, you can also read the post I wrote on Whodunit Agency’s B
 9. Personal Data Export as received by the user/visitor.
 
 == Changelog ==
+
+= 1.2 =
+* Replaces fixed captcha with a randomized one for better security.
+* Adds function_exists to check if WP 4.9.6 is used before displaying the form.
+* Fix some i18n strings
+Thanks @juliobox, @presskopp and @abdullahramzan for feedbacks, fixes and implementations.
 
 = 1.1 =
 * Enqueue styles and scripts only when necessary (thanks @juliobox and @jmlapam for the feedback and few fixes)
