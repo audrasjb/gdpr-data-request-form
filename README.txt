@@ -26,7 +26,7 @@ Easy to integrate:
 The widget allows to integrate Data Request Form in your theme widget areas. It comes with two options: Form Title and Form Description Paragraph. Both are empty by default so no title/description are displayed by default.
 
 - **Shortcode**
-`[gpdr-data-request]` shortcode allows to integrate Data Request Form everywhere you want, wether in a post or with PHP, using `echo do_shortcode( ['[gpdr-data-request]'] );` PHP snippet. This shortcode has no parameter.
+`[gpdr-data-request]` shortcode allows to integrate Data Request Form everywhere you want, wether in a post or with PHP, using `echo do_shortcode( '[gpdr-data-request]' );` PHP snippet. This shortcode has no parameter.
 
 - **Function** (planned release: 1.2 / next major release)
 We’re currently working on some PHP functions to allow developers to customize front-end forms. This is slated to the next release.
