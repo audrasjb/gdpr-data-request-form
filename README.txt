@@ -81,9 +81,23 @@ Sure! This plugin only have CSS Styles for error/success messages. It will use y
 
 = How can I manage Users Personal Data Request in WordPress Admin? =
 
-Read this Make/Core post: https://wordpress.org/news/2018/05/wordpress-4-9-6-privacy-and-maintenance-release/ (English)
-If you speak French, you can also read the post I wrote on Whodunit Agency’s Blog: https://www.whodunit.fr/wordpress-4-9-6-et-la-conformite-rgpd/ (French)
- 
+Please read this [Make/Core post announcing 4.9.6 GDPR features (English)](https://wordpress.org/news/2018/05/wordpress-4-9-6-privacy-and-maintenance-release/).
+If you speak French, you can also read the post I wrote on Whodunit Agency’s Blog: [WordPress 4.9.6 et la conformité RGPD (French)](https://www.whodunit.fr/wordpress-4-9-6-et-la-conformite-rgpd/)
+
+= My language is not supported or partially, what can I do? =
+
+This plugin is handled by the WordPress polyglot’s community. 
+The plugin author is not responsible for translations or mistakes in other languages than English (and also French since this is my native language).
+You can contribute to [translate GDPR Data Request Form in your native language here](https://translate.wordpress.org/projects/wp-plugins/gdpr-data-request-form) (and fix any mistakes/typos by yourself as well).
+
+= How can I contribute to this plugin?  =
+
+[This plugin is being developed on Github](https://github.com/audrasjb/gdpr-data-request-form).
+Any comment, issue or pull request are more than welcome :)
+You can also [open a support ticket](https://wordpress.org/support/plugin/gdpr-data-request-form) to ask for enhancements/bugfixes.
+
+Lovely contributors: [@audrasjb (plugin author)](https://profiles.wordpress.org/audrasjb), [@juliobox](https://profiles.wordpress.org/juliobox), [@wolly](https://profiles.wordpress.org/wolly), [@presskopp](https://profiles.wordpress.org/presskopp), [@abdullahramzan](https://profiles.wordpress.org/abdullahramzan).
+
 == Screenshots ==
 
 1. Shortcode integration.
