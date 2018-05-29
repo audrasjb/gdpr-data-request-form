@@ -33,12 +33,7 @@ function gdrf_data_request() {
 				$gdrf_error[] = esc_html__( 'This is not a valid email address.', 'gdpr-data-request-form' );
 			}
 			if ( intval( $gdrf_answer ) !== intval( $gdrf_human ) ) {
-				$gdrf_error[] = 
-				'réponse : ' . $gdrf_answer . 
-				' / key : ' . $gdrf_human_key .
-				' / rep1 : ' . $gdrf_numbers[0] . 
-				' / rep2 : ' . $gdrf_numbers[1] . 
-				esc_html__( 'Security check failed, invalid human verification field.', 'gdpr-data-request-form' );
+				$gdrf_error[] = esc_html__( 'Security check failed, invalid human verification field.', 'gdpr-data-request-form' );
 			}
 			if ( ! in_array( $gdrf_type, array( 'export_personal_data', 'remove_personal_data' ), true ) ) {
 				$gdrf_error[] = esc_html__( 'Request type invalid, please refresh this page and try to submit the form again.', 'gdpr-data-request-form' );
