@@ -104,8 +104,8 @@ class GDRF_Widget extends WP_Widget {
  
     public function form( $instance ) {
  
-        $title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( '', 'gdpr-data-request-form' );
-        $text = ! empty( $instance['text'] ) ? $instance['text'] : esc_html__( '', 'gdpr-data-request-form' );
+		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : '';
+		$text  = ( ! empty( $instance['text'] ) ) ? $instance['text'] : '';
 
         ?>
 
