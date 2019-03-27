@@ -30,11 +30,11 @@ function gdrf_data_request_form( $display_title ) {
 					<p id="gdrf-radio-label">
 						<?php esc_html_e( 'Select your request:', 'gdpr-data-request-form' ); ?>
 					</p>
-					
-					<input id="gdrf-data-type-export" class="gdrf-data-type-input" type="radio" name="gdrf_data_type" value="export_personal_data"> 
+
+					<input id="gdrf-data-type-export" class="gdrf-data-type-input" type="radio" name="gdrf_data_type" value="export_personal_data">
 					<label for="gdrf-data-type-export" class="gdrf-data-type-label"><?php esc_html_e( 'Export Personal Data', 'gdpr-data-request-form' ); ?></label>
 					<br />
-					<input id="gdrf-data-type-remove" class="gdrf-data-type-input" type="radio" name="gdrf_data_type" value="remove_personal_data"> 
+					<input id="gdrf-data-type-remove" class="gdrf-data-type-input" type="radio" name="gdrf_data_type" value="remove_personal_data">
 					<label for="gdrf-data-type-remove" class="gdrf-data-type-label"><?php esc_html_e( 'Remove Personal Data', 'gdpr-data-request-form' ); ?></label>
 				</div>
 				<p class="gdrf-field gdrf-field-email">

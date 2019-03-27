@@ -12,17 +12,20 @@
  */
 
 class GDRF_Widget extends WP_Widget {
-	
- 	function __construct() {
+
+	function __construct() {
 
 		parent::__construct(
 			'gdrf-widget',
 			'GDPR Data Request Form'
 		);
 
-		add_action( 'widgets_init', function() {
-			register_widget( 'GDRF_Widget' );
-		});
+		add_action(
+			'widgets_init',
+			function() {
+				register_widget( 'GDRF_Widget' );
+			}
+		);
 
 	}
 
@@ -31,7 +34,6 @@ class GDRF_Widget extends WP_Widget {
 		// Enqueue CSS/JS
 		wp_enqueue_script( 'gdrf-public-scripts' );
 		wp_enqueue_style( 'gdrf-public-styles' );
-
 
 		// Captcha
 		$number_one = rand( 1, 9 );
@@ -64,12 +66,12 @@ class GDRF_Widget extends WP_Widget {
 						<?php esc_html_e( 'Select your request:', 'gdpr-data-request-form' ); ?>
 					</p>
 
-					<input id="gdrf-data-type-export" class="gdrf-data-type-input" type="radio" name="gdrf_data_type" value="export_personal_data"> 
+					<input id="gdrf-data-type-export" class="gdrf-data-type-input" type="radio" name="gdrf_data_type" value="export_personal_data">
 					<label for="gdrf-data-type-export" class="gdrf-data-type-label">
 						<?php esc_html_e( 'Export Personal Data', 'gdpr-data-request-form' ); ?>
 					</label>
 					<br />
-					<input id="gdrf-data-type-remove" class="gdrf-data-type-input" type="radio" name="gdrf_data_type" value="remove_personal_data"> 
+					<input id="gdrf-data-type-remove" class="gdrf-data-type-input" type="radio" name="gdrf_data_type" value="remove_personal_data">
 					<label for="gdrf-data-type-remove" class="gdrf-data-type-label">
 						<?php esc_html_e( 'Remove Personal Data', 'gdpr-data-request-form' ); ?>
 					</label>
@@ -81,56 +83,56 @@ class GDRF_Widget extends WP_Widget {
 					</label>
 					<input type="email" id="gdrf_data_email" name="gdrf_data_email" required />
 				</p>
-				
+
 				<p class="gdrf-field gdrf-field-human">
 					<label for="gdrf_data_human">
-						<?php esc_html_e( 'Human verification (required):', 'gdpr-data-request-form' ); ?> 
+						<?php esc_html_e( 'Human verification (required):', 'gdpr-data-request-form' ); ?>
 						<?php echo $number_one . ' + ' . $number_two . ' = ?'; ?>
 					</label>
 					<input type="text" id="gdrf_data_human" name="gdrf_data_human" required />
 				</p>
-				
+
 				<p class="gdrf-field gdrf-field-submit">
 					<input id="gdrf-submit-button" type="submit" value="<?php esc_html_e( 'Send request', 'gdpr-data-request-form' ); ?>" />
 				</p>
 			</form>
 
-		<?php
+			<?php
 		} else {
 			// Display error message
 			esc_html_e( 'This plugin requires WordPress 4.9.6.', 'gdpr-data-request-form' );
 		}
-    }
- 
-    public function form( $instance ) {
- 
-        $title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( '', 'gdpr-data-request-form' );
-        $text = ! empty( $instance['text'] ) ? $instance['text'] : esc_html__( '', 'gdpr-data-request-form' );
+	}
 
-        ?>
+	public function form( $instance ) {
 
-        <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Optional widget title:', 'gdpr-data-request-form' ); ?></label>
-            <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
-        </p>
-        <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'text' ) ); ?>"><?php esc_html_e( 'Optional widget description:', 'gdpr-data-request-form' ); ?></label>
-            <textarea class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'text' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'text' ) ); ?>" type="text" cols="30" rows="10"><?php echo esc_attr( $text ); ?></textarea>
-        </p>
+		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( '', 'gdpr-data-request-form' );
+		$text  = ! empty( $instance['text'] ) ? $instance['text'] : esc_html__( '', 'gdpr-data-request-form' );
 
-        <?php
-    }
- 
-    public function update( $new_instance, $old_instance ) {
- 
-        $instance = array();
- 
-        $instance['title'] = ( !empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-        $instance['text'] = ( !empty( $new_instance['text'] ) ) ? $new_instance['text'] : '';
- 
-        return $instance;
-    
-    }
- 
+		?>
+
+		<p>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Optional widget title:', 'gdpr-data-request-form' ); ?></label>
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
+		</p>
+		<p>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'text' ) ); ?>"><?php esc_html_e( 'Optional widget description:', 'gdpr-data-request-form' ); ?></label>
+			<textarea class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'text' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'text' ) ); ?>" type="text" cols="30" rows="10"><?php echo esc_attr( $text ); ?></textarea>
+		</p>
+
+		<?php
+	}
+
+	public function update( $new_instance, $old_instance ) {
+
+		$instance = array();
+
+		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+		$instance['text']  = ( ! empty( $new_instance['text'] ) ) ? $new_instance['text'] : '';
+
+		return $instance;
+
+	}
+
 }
 $gdrf_widget = new GDRF_Widget();
