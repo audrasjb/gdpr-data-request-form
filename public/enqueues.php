@@ -14,6 +14,7 @@
 add_action( 'wp_enqueue_scripts', 'enqueue_styles_gdrf_public' );
 function enqueue_styles_gdrf_public() {
 	wp_register_style( 'gdrf-public-styles', plugin_dir_url( __FILE__ ) . 'css/public.css', array(), '', 'all' );
+	wp_enqueue_style( 'gdrf-public-styles' );
 }
 
 add_action( 'wp_enqueue_scripts', 'enqueue_scripts_gdrf_public' );
@@ -25,4 +26,5 @@ function enqueue_scripts_gdrf_public() {
 		'gdrf_errors'   => __( 'Some errors occurred:', 'gdpr-data-request-form' ),
 	);
 	wp_localize_script( 'gdrf-public-scripts', 'gdrf_localize', $translations );
+	wp_enqueue_script( 'gdrf-public-scripts' );
 }
