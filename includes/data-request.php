@@ -11,14 +11,14 @@
  */
 
 function gdrf_data_request() {
-	$gdrf_error      = array();
-	$gdrf_type       = sanitize_key( $_POST['gdrf_data_type'] );
-	$gdrf_email      = sanitize_email( $_POST['gdrf_data_email'] );
-	$gdrf_human      = absint( filter_input( INPUT_POST, 'gdrf_data_human', FILTER_SANITIZE_NUMBER_INT ) );
-	$gdrf_human_key  = esc_html( filter_input( INPUT_POST, 'gdrf_data_human_key', FILTER_SANITIZE_STRING ) );
-	$gdrf_numbers    = explode( '000', $gdrf_human_key );
-	$gdrf_answer     = absint( $gdrf_numbers[0] ) + absint( $gdrf_numbers[1] );
-	$gdrf_nonce      = esc_html( filter_input( INPUT_POST, 'gdrf_data_nonce', FILTER_SANITIZE_STRING ) );
+	$gdrf_error     = array();
+	$gdrf_type      = sanitize_key( $_POST['gdrf_data_type'] );
+	$gdrf_email     = sanitize_email( $_POST['gdrf_data_email'] );
+	$gdrf_human     = absint( filter_input( INPUT_POST, 'gdrf_data_human', FILTER_SANITIZE_NUMBER_INT ) );
+	$gdrf_human_key = esc_html( filter_input( INPUT_POST, 'gdrf_data_human_key', FILTER_SANITIZE_STRING ) );
+	$gdrf_numbers   = explode( '000', $gdrf_human_key );
+	$gdrf_answer    = absint( $gdrf_numbers[0] ) + absint( $gdrf_numbers[1] );
+	$gdrf_nonce     = esc_html( filter_input( INPUT_POST, 'gdrf_data_nonce', FILTER_SANITIZE_STRING ) );
 
 	if ( ! function_exists( 'wp_create_user_request' ) ) {
 		wp_send_json_success( esc_html__( 'The request can’t be processed on this website. This feature requires WordPress 4.9.6 at least.', 'gdpr-data-request-form' ) );
