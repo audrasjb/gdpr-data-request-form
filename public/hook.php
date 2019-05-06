@@ -21,6 +21,10 @@
  */
  	function gdrf_data_request_form() {
 
+ 		// Enqueues
+		wp_enqueue_style( 'gdrf-public-styles' );
+		wp_enqueue_script( 'gdrf-public-scripts' );
+
 		// Captcha
 		$number_one = rand( 1, 9 );
 		$number_two = rand( 1, 9 );
