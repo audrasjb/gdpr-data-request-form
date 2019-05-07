@@ -1,10 +1,10 @@
-﻿=== GDPR Data Request Form ===
-Contributors: audrasjb,whodunitagency
+=== GDPR Data Request Form ===
+Contributors: audrasjb,whodunitagency,xkon
 Tags: GDPR, RGPD, privacy, form, data request, personal data request, export, personal data
 Requires at least: 4.9.6
-Tested up to: 4.9.6
-Requires PHP: 5.4
-Stable tag: 1.2
+Tested up to: 5.2
+Requires PHP: 5.6
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,10 +26,10 @@ Easy to integrate:
 The widget allows to integrate Data Request Form in your theme widget areas. It comes with two options: Form Title and Form Description Paragraph. Both are empty by default so no title/description are displayed by default.
 
 - **Shortcode**
-`[gpdr-data-request]` shortcode allows to integrate Data Request Form everywhere you want, wether in a post or with PHP, using `echo do_shortcode( '[gpdr-data-request]' );` PHP snippet. This shortcode has no parameter.
+`[gpdr-data-request]` shortcode allows to integrate Data Request Form where you need. This shortcode has no parameter.
 
-- **Function** (planned release: 1.3 / next major release)
-We’re currently working on some PHP functions to allow developers to customize front-end forms. This is slated to the next release.
+- **PHP Function**
+`gdrf_data_request_form()` function allows to integrate Data Request Form where you need. This shortcode has no parameter.
 
 - **Gutenberg Block** (planned release: 1.4)
 We’re of course working on a Gutenberg block integration too :)
@@ -69,7 +69,7 @@ GDPR Data Request Form is using AJAX to provide clean and user-friendly forms in
 
 = How to display Data Request Forms using shortcodes? =
 
-Use our shortcode `[gpdr-data-request]` in your posts or pages.
+Use our shortcode `[gdpr-data-request]` in your posts or pages.
 
 = How to display Data Request Forms using widgets? =
 
@@ -96,7 +96,7 @@ You can contribute to [translate GDPR Data Request Form in your native language 
 Any comment, issue or pull request are more than welcome :)
 You can also [open a support ticket](https://wordpress.org/support/plugin/gdpr-data-request-form) to ask for enhancements/bugfixes.
 
-Lovely contributors: [@audrasjb (plugin author)](https://profiles.wordpress.org/audrasjb), [@juliobox](https://profiles.wordpress.org/juliobox), [@wolly](https://profiles.wordpress.org/wolly), [@presskopp](https://profiles.wordpress.org/presskopp), [@abdullahramzan](https://profiles.wordpress.org/abdullahramzan).
+Lovely contributors: [@audrasjb (plugin author)](https://profiles.wordpress.org/audrasjb), [@juliobox](https://profiles.wordpress.org/juliobox), [@wolly](https://profiles.wordpress.org/wolly), [@presskopp](https://profiles.wordpress.org/presskopp), [@abdullahramzan](https://profiles.wordpress.org/abdullahramzan), [@xkon](https://profiles.wordpress.org/xkon).
 
 == Screenshots ==
 
@@ -111,6 +111,11 @@ Lovely contributors: [@audrasjb (plugin author)](https://profiles.wordpress.org/
 9. Personal Data Export as received by the user/visitor.
 
 == Changelog ==
+
+= 1.3 =
+* Introduce gdrf_data_request_form() function.
+* General code refactoring to prepare potential Core inclusion of the plugin.
+* Introduce [gdpr-data-request] shortcode. Obviously, the old shortcake is still supported for backward compatibility.
 
 = 1.2 =
 * Replaces fixed captcha with a randomized one for better security.

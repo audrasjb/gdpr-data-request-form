@@ -14,7 +14,7 @@
 function gdrf_shortcode_init() {
 
 	add_shortcode( 'gdpr-data-request', 'gdrf_data_request_form' );
-	// Legacy
+	// Legacy shortcode for backward compatibility
 	add_shortcode( 'gpdr-data-request', 'gdrf_data_request_form' );
 }
 add_action( 'init', 'gdrf_shortcode_init' );
