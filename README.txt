@@ -29,7 +29,7 @@ The widget allows to integrate Data Request Form in your theme widget areas. It 
 `[gpdr-data-request]` shortcode allows to integrate Data Request Form where you need. This shortcode has no parameter.
 
 - **PHP Function**
-`gdrf_data_request_form()` function allows to integrate Data Request Form where you need. This shortcode has no parameter.
+`echo gdrf_data_request_form()` function allows to integrate Data Request Form where you need. This function has no parameter. Don’t forget to `echo` the function.
 
 - **Gutenberg Block** (planned release: 1.4)
 We’re of course working on a Gutenberg block integration too :)
@@ -67,9 +67,13 @@ GDPR Data Request Form is using AJAX to provide clean and user-friendly forms in
 - An email is sent to the website administrator to validate the request.
 - The personal data are sent by email to the user/visitor (as a 3-day available download link), or erased, depending on the user request type.
 
-= How to display Data Request Forms using shortcodes? =
+= How to display Data Request Forms using the shortcode? =
 
 Use our shortcode `[gdpr-data-request]` in your posts or pages.
+
+= How to display Data Request Forms using the PHP function? =
+
+Use our function: `echo gdrf_data_request_form()` in your theme/child theme.
 
 = How to display Data Request Forms using widgets? =
 
