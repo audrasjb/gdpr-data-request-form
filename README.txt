@@ -26,14 +26,14 @@ It’s easy to integrate:
 - **Widget**
 The widget allows to integrate Data Request Form in your theme widget areas. It comes with three options: Form Title, Form Description Paragraph and Form Type.
 
+- **Gutenberg Block** (since 1.4!)
+The Gutenberg Block make it even easier to integrate front-end forms in your website. The block allows you to choose the type of form you need.
+
 - **Shortcode**
 `[gpdr-data-request]` shortcode allows to integrate Data Request Form where you need. This shortcode has no parameter.
 
 - **PHP Function**
-`echo gdrf_data_request_form( $args )` function allows to integrate Data Request Form where you need. This function has some parameters (see FAQ section below). Don’t forget to `echo` the function.
-
-- **Gutenberg Block** (since 1.4!)
-The Gutenberg Block make it even easier to integrate front-end forms in your website. The block allows you to choose the type of form you need.
+`echo gdrf_data_request_form( $args )` function allows to integrate Data Request Form where you need. This function has some parameters and filters (see FAQ section below). Don’t forget to `echo` the function.
 
 GDPR Data Request Form is using AJAX to provide clean and user-friendly forms in front-end. You can integrate them in any page of your website (like your Privacy Policy Page) or in your sidebar/footer.
 
@@ -86,7 +86,7 @@ This function has some parameters:
 'value_submit' (type String): text of the submit form button.
 'request_type' (type String): either you want to display the Export Personal Data Form, the Remove Personal Data Form, or to let the users choose their request by themselves.
 
-See the documentation for further examples/use case.
+See the documentation for further examples/use case: [GitHub Repository](https://github.com/audrasjb/gdpr-data-request-form)
 
 = How to display Data Request Forms using widgets? =
 
