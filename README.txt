@@ -1,6 +1,6 @@
 === GDPR Data Request Form ===
-Contributors: audrasjb,whodunitagency,xkon
-Tags: GDPR, RGPD, privacy, form, data request, personal data request, export, personal data
+Contributors: audrasjb,whodunitagency,xkon,WordPress Privacy Team
+Tags: GDPR, RGPD, Gutenberg, block, privacy, form, data request, export, personal data
 Requires at least: 4.9.6
 Tested up to: 5.2
 Requires PHP: 5.6
@@ -8,33 +8,34 @@ Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Integrates WordPress Core 4.9.6 GDPR tools to allow users/visitors to request Personal Data export and erasure with front-end forms
+Use WordPress Core GDPR tools to build front-end Personal Data export/erasure forms (includes Widget, Gutenberg Block, shortcode & Hooks).
 
 == Description ==
 
 This plugin uses WordPress Core tools for GDPR Compliance.
 
-Since release 4.9.6, WordPress admin has some tools to handle Privacy User Requests. Administrators are able to create Data Request for every users in order to send or erase users data. This plugin allow website administrators to display Data Request Forms in front-end, for example in your Privacy Page.
+Since release 4.9.6, WordPress admin has some tools to handle Privacy User Requests. Administrators are able to create Data Request for every users in order to send or erase users data. This plugin allow website administrators to display Data Request Forms in front-end, for example in your Privacy Policy Page.
 
-Easily integrate a Personal Data Request Form for your visitors/users in front-end, with two options:
+Easily integrate a Personal Data Request Form for your visitors/users in front-end, with some options:
 - Personal Data Export
 - Personal Data Erasure
+- Both of them
 
-Easy to integrate:
+It’s easy to integrate:
 
 - **Widget**
-The widget allows to integrate Data Request Form in your theme widget areas. It comes with two options: Form Title and Form Description Paragraph. Both are empty by default so no title/description are displayed by default.
+The widget allows to integrate Data Request Form in your theme widget areas. It comes with three options: Form Title, Form Description Paragraph and Form Type.
 
 - **Shortcode**
 `[gpdr-data-request]` shortcode allows to integrate Data Request Form where you need. This shortcode has no parameter.
 
 - **PHP Function**
-`echo gdrf_data_request_form()` function allows to integrate Data Request Form where you need. This function has no parameter. Don’t forget to `echo` the function.
+`echo gdrf_data_request_form( $args )` function allows to integrate Data Request Form where you need. This function has some parameters (see FAQ section below). Don’t forget to `echo` the function.
 
-- **Gutenberg Block** (planned release: 1.4)
-We’re of course working on a Gutenberg block integration too :)
+- **Gutenberg Block** (since 1.4!)
+The Gutenberg Block make it even easier to integrate front-end forms in your website. The block allows you to choose the type of form you need.
 
-GDPR Data Request Form is using AJAX to provide clean and user-friendly forms in front-end. You can integrate them in your Privacy Page / Legal Notice with our shortcodes or in your sidebar/footer with our widgets.
+GDPR Data Request Form is using AJAX to provide clean and user-friendly forms in front-end. You can integrate them in any page of your website (like your Privacy Policy Page) or in your sidebar/footer.
 
 **CAUTION: You need WordPress 4.9.6 at least to use this plugin!**
 
@@ -74,10 +75,26 @@ Use our shortcode `[gdpr-data-request]` in your posts or pages.
 = How to display Data Request Forms using the PHP function? =
 
 Use our function: `echo gdrf_data_request_form()` in your theme/child theme.
+This function has some parameters:
+
+'form_id' (type String): ID of the <form> HTML element. Default: `gdrf-form`.
+'label_select_request' (type String): label of the Request Type selector.
+'label_select_export' (type String): label of the export option radio button.
+'label_select_remove' (type String): label of the remove option radio button.
+'label_input_email' (type String): label of the "email" required field.
+'label_input_captcha' (type String): label of the "captcha" required field.
+'value_submit' (type String): text of the submit form button.
+'request_type' (type String): either you want to display the Export Personal Data Form, the Remove Personal Data Form, or to let the users choose their request by themselves.
+
+See the documentation for further examples/use case.
 
 = How to display Data Request Forms using widgets? =
 
 Use our widget `GDPR Data Request Form` available on Widgets Screen.
+
+= How to display Data Request Forms using Gutenberg Block? =
+
+Use our `Privacy Request Block` Block available on any page/post using Gutenberg Block Editor.
 
 = Can I use custom CSS styles for my GDPR Data Request Forms? =
 
@@ -115,6 +132,12 @@ Lovely contributors: [@audrasjb (plugin author)](https://profiles.wordpress.org/
 9. Personal Data Export as received by the user/visitor.
 
 == Changelog ==
+
+= 1.4 =
+* New feature: introduce the Privacy Data Request Gutenberg Block.
+* New feature: introduce `privacy_data_request_form_defaults` Filter to hook the default form parameters.
+* Enhancement: new option on the Widget. Now you can choose the type of form you want to display.
+* Coding standards improvements.
 
 = 1.3 =
 * Introduce gdrf_data_request_form() function.
