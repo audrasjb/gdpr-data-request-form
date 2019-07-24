@@ -1,10 +1,10 @@
 === GDPR Data Request Form ===
-Contributors: audrasjb,whodunitagency,xkon,WordPress Privacy Team
+Contributors: audrasjb,whodunitagency,xkon
 Tags: GDPR, RGPD, Gutenberg, block, privacy, form, data request, export, personal data
 Requires at least: 4.9.6
 Tested up to: 5.2
 Requires PHP: 5.6
-Stable tag: 1.3
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -121,9 +121,11 @@ Lovely contributors: [@audrasjb (plugin author)](https://profiles.wordpress.org/
 
 == Screenshots ==
 
-1. Shortcode integration.
-2. Front-end form feature.
-3. Front-end form request succeed.
+1. Front-end form feature.
+2. Front-end form request succeed.
+3. Specific Gutenberg Block available.
+4. Gutenberg Block rendering in the editor.
+5. Widget parameters.
 4. Confirmation email sent to the user/visitor.
 5. Data requests screen updated in WordPress Admin.
 6. The user/visitor confirmed this Data Request.
