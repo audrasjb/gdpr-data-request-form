@@ -1,28 +1,13 @@
 ( function( $ ) {
 	'use strict';
-	
+
 	jQuery(document).ready(function() {
 
 		$( '#gdrf-form' ).on( 'submit', function( event ) {
-			
+
 			event.preventDefault();
-			
-			var data_type = '';		
-			if ( $( 'input[name=gdrf_data_type]' ).is( ':checkbox' ) ) {
-				data_type = $( 'input[name=gdrf_data_type]:checked', '#gdrf-form').val();
-			} else {
-				data_type = $( 'input[name=gdrf_data_type]', '#gdrf-form').val();
-			}
-			
-			var	button = $( '#gdrf-submit-button' ),
-				data = {
-					'action':               'gdrf_data_request',
-					'gdrf_data_type' :      data_type,
-					'gdrf_data_human_key':  $( '#gdrf_data_human_key' ).val(),
-					'gdrf_data_email':      $( '#gdrf_data_email' ).val(),
-					'gdrf_data_human':      $( '#gdrf_data_human' ).val(),
-					'gdrf_data_nonce':      $( '#gdrf_data_nonce' ).val(),
-				};
+
+			var data = $( this ).serialize();
 
 			$( '.gdrf-errors' ).remove();
 			$( '.gdrf-success' ).remove();
