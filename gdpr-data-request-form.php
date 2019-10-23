@@ -9,7 +9,7 @@
  * Plugin Name:       GDPR Data Request Form
  * Plugin URI:        https://jeanbaptisteaudras.com/gdpr-data-request-form
  * Description:       Use WordPress Core GDPR tools to build front-end Personal Data export/erasure forms (includes Widget, Gutenberg Block, shortcode & Hooks).
- * Version:           1.4
+ * Version:           1.4.1
  * Author:            audrasjb
  * Author URI:        https://jeanbaptisteaudras.com
  * License:           GPL-2.0+
