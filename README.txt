@@ -4,7 +4,7 @@ Tags: GDPR, RGPD, Gutenberg, block, privacy, form, data request, export, persona
 Requires at least: 4.9.6
 Tested up to: 5.3
 Requires PHP: 5.6
-Stable tag: 1.4.1
+Stable tag: 1.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -134,6 +134,9 @@ Lovely contributors: [@audrasjb (plugin author)](https://profiles.wordpress.org/
 9. Personal Data Export as received by the user/visitor.
 
 == Changelog ==
+
+= 1.4.2 =
+* Various WordPress coding standards enhancements. Props @leprincenoir for the patch: https://github.com/audrasjb/gdpr-data-request-form/pull/25
 
 = 1.4.1 =
 * Fix: Simplify form data serialization when submitting form with AJAX. Props @gonzomir for the patch: https://github.com/audrasjb/gdpr-data-request-form/pull/24
