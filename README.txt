@@ -2,7 +2,7 @@
 Contributors: audrasjb,whodunitagency,xkon
 Tags: GDPR, RGPD, Gutenberg, block, privacy, form, data request, export, personal data
 Requires at least: 4.9.6
-Tested up to: 5.3
+Tested up to: 5.4
 Requires PHP: 5.6
 Stable tag: 1.4.2
 License: GPLv2 or later
